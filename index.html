@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de San Valentín</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botón para abrir la carta -->
+    <button class="card-btn" onclick="showCard()">💌 Abrir Carta</button>
+
+    <!-- Ventana del discurso -->
+    <div id="lyrics-window" class="hidden">
+        <div class="lyrics-content">
+            <h2>Para ti, en San Valentín ❤️</h2>
+            <div id="lyrics">
+                <p>Hola Ana Belen Anabel (lo pronuncio bien),se que no es mucho pero antes de decir te amo,</p>
+                <p>quiero decirte lo preciado, importante y especial que te convertiste para mí </p>
+                <p>y que aunque a veces choquemos nunca deje de quererte y nuna dejare de hacerlo</p>
+                <p>Me devolviste las ganas,las emociones de volver a amar y me alegra saber que eres vos</p>
+                <p>y quiero que lo sigas siendo sobran las razones para decir que eres la persona mas increible que he conocido</p>
+                <p>¡Te Amo mucho Feliz Dia De San Valentín!</p>
+            </div>
+            <button onclick="hideCard()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Reproductor de audio -->
+    <audio id="audio-player" src="those_eyes.mp3"></audio>
+
+    <div id="falling-flowers"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
