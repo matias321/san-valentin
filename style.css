@@ -1,0 +1,138 @@
+/* Reinicia márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('Imagen.jpg') no-repeat center center fixed;
+    background-size: contain; /* La imagen cubrirá toda la pantalla */
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Evita el scroll */
+}
+
+/* Estilos para el botón */
+.card-btn {
+    background-color: #ff6b6b; /* Color rosa */
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-family: 'Great Vibes', cursive; /* Fuente romántica */
+}
+
+.card-btn:hover {
+    background-color: #ff4c4c; /* Color rosa más oscuro */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+/* Estilos para la ventana del discurso */
+#lyrics-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lyrics-window.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#lyrics-window:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenedor del discurso */
+.lyrics-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lyrics-content h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #ff6b6b; /* Color rosa */
+}
+
+.lyrics-content p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.lyrics-content button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-family: 'Great Vibes', cursive; /* Fuente romántica */
+    font-size: 20px;
+}
+
+.lyrics-content button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Estilos para las flores cayendo */
+.falling-flower {
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.petal {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: center bottom;
+}
+
+.center {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Animación de caída */
+@keyframes caer {
+    from {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
